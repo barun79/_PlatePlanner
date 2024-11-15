@@ -47,19 +47,11 @@ class HomeActivity : AppCompatActivity() {
             myIntent.putExtra("CATEGORY","Drinks")
             startActivity(myIntent)
         }
-//        binding.more.setOnClickListener {
-//                var dialog=Dialog(this)
-//            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-//            dialog.setContentView(R.layout.bottom_sheet)
-//
-//            dialog.show()
-//            dialog.window!!.setLayout(
-//                ViewGroup.LayoutParams.MATCH_PARENT,
-//                ViewGroup.LayoutParams.WRAP_CONTENT
-//            )
-//            dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-//           dialog.window!!.setGravity(Gravity.BOTTOM)
-//        }
+
+        binding.more.setOnClickListener{
+           var myIntent = Intent (this@HomeActivity, FunctionActivity::class.java)
+            startActivity(myIntent)
+        }
         binding.desserts.setOnClickListener {
             var myIntent=Intent(this@HomeActivity, CategoryActivity::class.java)
             myIntent.putExtra("TITTLE","Desserts")

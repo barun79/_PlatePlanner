@@ -15,19 +15,31 @@
         android:theme="@style/Theme.RacipeApp"
         tools:targetApi="31">
         <activity
-            android:name="com.threeandoiddev.racipeapp.RecipeActivity"
+            android:name=".ImageSearchActivity"
             android:exported="false" />
         <activity
-            android:name="com.threeandoiddev.racipeapp.CategoryActivity"
+            android:name=".DeliveryActivity"
             android:exported="false" />
         <activity
-            android:name="com.threeandoiddev.racipeapp.SearchActivity"
+            android:name=".FunctionActivity"
             android:exported="false" />
         <activity
-            android:name="com.threeandoiddev.racipeapp.HomeActivity"
+            android:name=".BudgetFriendly"
             android:exported="false" />
         <activity
-            android:name="com.threeandoiddev.racipeapp.MainActivity"
+            android:name=".RecipeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
