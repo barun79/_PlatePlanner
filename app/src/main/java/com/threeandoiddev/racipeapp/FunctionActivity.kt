@@ -1,7 +1,9 @@
 package com.threeandoiddev.racipeapp
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -26,13 +28,17 @@ class FunctionActivity : AppCompatActivity() {
         val imagesearchbutton = findViewById<LinearLayout>(R.id.image_search)
 
         budgetfriendlybutton.setOnClickListener{
-            val intent = Intent(this ,BudgetFriendly::class.java)
+            val intent = Intent(this, BudgetFriendly::class.java )
             startActivity(intent)
         }
 
         deliverybutton.setOnClickListener {
-            val intent = Intent(this, DeliveryActivity::class.java )
-            startActivity(intent)
+            try {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.doordash.com/"))
+                startActivity(intent)
+            } catch (e: Exception) {
+                Log.e("FunctionActivity", "Error launching browser: ${e.message}")
+            }
         }
         imagesearchbutton.setOnClickListener {
             val intent = Intent(this, ImageSearchActivity::class.java)
